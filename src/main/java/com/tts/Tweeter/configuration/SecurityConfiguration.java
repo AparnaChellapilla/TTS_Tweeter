@@ -1,6 +1,5 @@
 package com.tts.Tweeter.configuration;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -22,8 +21,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
     @Autowired
     private DataSource dataSource;
-
-
 
     @Value("${spring.queries.users-query}")
     private String usersQuery;
@@ -71,4 +68,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .ignoring()
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
     }
+
+
 }

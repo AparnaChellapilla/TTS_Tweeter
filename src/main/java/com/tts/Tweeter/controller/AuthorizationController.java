@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.Valid;
 
+
 @Controller
 public class AuthorizationController {
-
 
     private UserService userService;
 
@@ -49,5 +49,10 @@ public class AuthorizationController {
         return "registration";
     }
 
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
 
 }
